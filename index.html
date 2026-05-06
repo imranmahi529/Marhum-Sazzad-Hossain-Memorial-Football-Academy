@@ -2,58 +2,43 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<title>MSH Football Academy Registration</title>
+<title>MSH Academy Registration</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 
 <style>
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    margin: 0;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
     padding: 20px;
 }
 
-.form-container {
-    background: #fff;
-    max-width: 800px;
+.container {
+    background: white;
+    max-width: 850px;
     margin: auto;
     padding: 25px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 .header {
     text-align: center;
     border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
 }
 
 .header img {
-    width: 80px;
+    width: 90px;
 }
 
 .header h2 {
     margin: 10px 0;
-    color: #0f2027;
 }
 
-.photo-box {
-    width: 120px;
-    height: 140px;
-    border: 2px dashed #aaa;
-    margin: 15px auto;
-    text-align: center;
-    line-height: 140px;
-    color: #888;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    font-weight: bold;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
 
 input, textarea {
@@ -61,11 +46,14 @@ input, textarea {
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
-    margin-top: 5px;
 }
 
-textarea {
-    resize: none;
+.photo-preview {
+    width: 120px;
+    height: 140px;
+    border: 2px dashed #aaa;
+    margin: 10px auto;
+    object-fit: cover;
 }
 
 .signature {
@@ -80,102 +68,55 @@ textarea {
 }
 
 button {
-    margin-top: 20px;
     width: 100%;
     padding: 12px;
+    margin-top: 15px;
     background: #0f2027;
     color: white;
     border: none;
     border-radius: 10px;
     font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #203a43;
 }
 </style>
 </head>
 
 <body>
 
-<div id="formArea" class="form-container">
+<div id="formArea" class="container">
 
 <div class="header">
-    <img src="logo.png">
+    <img src="https://raw.githubusercontent.com/imranmahi529/Marhum-Sazzad-Hossain-Memorial-Football-Academy/refs/heads/main/file_0000000036d0720695474bda0a2cebbb.png">
     <h2>মরহুম সাজ্জাদ হোসাইন স্মৃতি ফুটবল একাডেমি</h2>
-    <label>তারিখ:</label>
-    <input type="date">
 </div>
 
-<div class="photo-box">ছবি</div>
-
-<div class="form-group">
-<label>নাম</label>
-<input type="text">
-</div>
-
-<div class="form-group">
-<label>জন্ম তারিখ</label>
 <input type="date">
-</div>
 
-<div class="form-group">
-<label>গ্রাম</label>
-<input type="text">
-</div>
+<!-- Photo Upload -->
+<input type="file" accept="image/*" onchange="loadPhoto(event)">
+<img id="photo" class="photo-preview">
 
-<div class="form-group">
-<label>শিক্ষাগত যোগ্যতা</label>
-<input type="text">
-</div>
-
-<div class="form-group">
-<label>থানা ও জেলা</label>
-<input type="text">
-</div>
-
-<div class="form-group">
-<label>পরিচয়পত্র নং</label>
-<input type="text">
-</div>
-
-<div class="form-group">
-<label>মোবাইল নাম্বার</label>
-<input type="text">
-</div>
-
-<div class="form-group">
-<label>ইমেইল</label>
-<input type="email">
-</div>
-
-<div class="form-group">
-<label>রক্তের গ্রুপ</label>
-<input type="text">
+<div class="grid">
+<input placeholder="নাম">
+<input type="date">
+<input placeholder="গ্রাম">
+<input placeholder="শিক্ষাগত যোগ্যতা">
+<input placeholder="থানা ও জেলা">
+<input placeholder="পরিচয়পত্র নং">
+<input placeholder="মোবাইল নাম্বার">
+<input placeholder="ইমেইল">
+<input placeholder="রক্তের গ্রুপ">
 </div>
 
 <h3>অঙ্গীকারনামা</h3>
 
-<textarea rows="10">
-আমি এই মর্মে অঙ্গীকার করছি যে, মরহুম সাজ্জাদ হোসাইন স্মৃতি ফুটবল একাডেমির নিয়ম-শৃঙ্খলা, সম্মান, সততা ও দায়িত্বশীলতা সর্বদা মেনে চলবো।
-
-১. একাডেমির সকল নিয়ম-কানুন যথাযথভাবে পালন করব  
-২. কোচ, খেলোয়াড় ও স্টাফদের সম্মান করব  
-৩. অনুশীলনে নিয়মিত উপস্থিত থাকব  
-৪. শৃঙ্খলা ও আচরণে একাডেমির মর্যাদা রক্ষা করব  
-৫. ব্যক্তিগত ফিটনেস উন্নত রাখব  
-৬. মাঠে ও মাঠের বাইরে ভদ্র আচরণ বজায় রাখব  
-৭. একাডেমির সুনাম ক্ষুণ্ন করব না  
-৮. নেশাজাতীয় অভ্যাস থেকে দূরে থাকব  
-৯. দল ও একাডেমির প্রতি নিবেদিত থাকব  
-১০. নিজেকে একজন ভালো খেলোয়াড় হিসেবে গড়ে তুলব  
+<textarea rows="8">
+আমি এই মর্মে অঙ্গীকার করছি যে, মরহুম সাজ্জাদ হোসাইন স্মৃতি ফুটবল একাডেমির সকল নিয়ম মেনে চলবো।
 </textarea>
 
 <div class="signature">
-    <div>_____________<br>সদস্য সাক্ষর</div>
-    <div>_____________<br>অভিভাবক</div>
-    <div>_____________<br>ম্যানেজমেন্ট</div>
+<div>_________<br>সদস্য</div>
+<div>_________<br>অভিভাবক</div>
+<div>_________<br>ম্যানেজমেন্ট</div>
 </div>
 
 </div>
@@ -183,9 +124,13 @@ button:hover {
 <button onclick="downloadPDF()">📄 PDF Download</button>
 
 <script>
+function loadPhoto(event) {
+    document.getElementById('photo').src = URL.createObjectURL(event.target.files[0]);
+}
+
 function downloadPDF() {
     const element = document.getElementById("formArea");
-    html2pdf().from(element).save("Registration_Form.pdf");
+    html2pdf().from(element).save("MSH_Registration.pdf");
 }
 </script>
 
