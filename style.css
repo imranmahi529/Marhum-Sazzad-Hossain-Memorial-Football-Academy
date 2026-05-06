@@ -65,10 +65,43 @@ button {
     border: none;
     border-radius: 10px;
 }
+
 .container {
-    background: rgba(255,255,255,0.78);
-    backdrop-filter: blur(12px);
+    background: url('form-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    border: 1px solid rgba(255,255,255,0.2);
+    padding: 25px;
+
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+function downloadPDF() {
+    const element = document.getElementById("formArea");
+
+    html2pdf().set({
+        margin: 0,
+        image: { type: 'jpeg', quality: 1 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    }).from(element).save();
+}
+.container {
+    position: relative;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(255,255,255,0.2);
+    z-index: 0;
+}
+
+.container * {
+    position: relative;
+    z-index: 1;
 }
