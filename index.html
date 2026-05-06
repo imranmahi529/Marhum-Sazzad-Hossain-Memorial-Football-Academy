@@ -1,180 +1,193 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morhum Sajjad Hossain Smriti Football Academy</title><!-- Google Font --><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#f4f6f8;color:#333;}
+<title>MSH Football Academy Registration</title>
 
-/* HEADER */
-header{
-background:#0b5d3b;
-color:#fff;
-padding:15px 30px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
-}
-header h1{font-size:20px;}
-nav a{
-color:#fff;
-margin:0 12px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-}
-nav a:hover{color:#ffd700;}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 
-/* HERO */
-.hero{
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a');
-background-size:cover;
-background-position:center;
-color:#fff;
-text-align:center;
-padding:120px 20px;
-}
-.hero h2{font-size:42px;margin-bottom:10px;}
-.hero p{font-size:18px;margin-bottom:25px;}
-
-.btn{
-background:#ffd700;
-color:#000;
-padding:12px 25px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-}
-.btn:hover{background:#fff;color:#0b5d3b;}
-
-/* SECTION */
-.section{
-padding:60px 20px;
-text-align:center;
-}
-.section h2{
-margin-bottom:25px;
-color:#0b5d3b;
-font-size:28px;
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    margin: 0;
+    padding: 20px;
 }
 
-/* CARDS */
-.cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
-.card{
-background:#fff;
-padding:25px;
-border-radius:15px;
-width:260px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-transition:0.3s;
-}
-.card:hover{
-transform:translateY(-8px);
+.form-container {
+    background: #fff;
+    max-width: 800px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-/* GALLERY */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-padding:20px;
-}
-.gallery img{
-width:100%;
-border-radius:10px;
+.header {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
 }
 
-/* FORM */
-form{
-max-width:400px;
-margin:auto;
-}
-input,textarea{
-width:100%;
-padding:12px;
-margin:8px 0;
-border-radius:8px;
-border:1px solid #ccc;
+.header img {
+    width: 80px;
 }
 
-/* FOOTER */
-footer{
-background:#0b5d3b;
-color:#fff;
-text-align:center;
-padding:25px;
-margin-top:40px;
+.header h2 {
+    margin: 10px 0;
+    color: #0f2027;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-.hero h2{font-size:28px;}
-.cards{flex-direction:column;align-items:center;}
+.photo-box {
+    width: 120px;
+    height: 140px;
+    border: 2px dashed #aaa;
+    margin: 15px auto;
+    text-align: center;
+    line-height: 140px;
+    color: #888;
 }
-</style></head><body><!-- HEADER --><header>
-<h1>MSH Academy</h1>
-<nav>
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#admission">Admission</a>
-<a href="#gallery">Gallery</a>
-  <a href="#apply">apply</a>
-<a href="#contact">Contact</a>
-</nav>
-</header><!-- HERO --><section class="hero">
-<h2>Morhum Sajjad Hossain Smriti Football Academy</h2>
-<p>Build Players • Build Discipline • Build Future</p>
-<a href="#contact" class="btn">Join Now</a>
-</section><!-- ABOUT --><section id="about" class="section">
-<h2>About Us</h2>
-<p>We are dedicated to building young football talents in Gobindaganj, Chatak, Sunamganj. Our goal is to create skilled players and strong character individuals.</p>
-</section><!-- TRAINING --><section id="training" class="section">
-<h2>Training Programs</h2>
-<div class="cards">
-<div class="card">
-<h3>U-10</h3>
-<p>Basic skills, fun training</p>
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+.signature {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.signature div {
+    text-align: center;
+    width: 30%;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #0f2027;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #203a43;
+}
+</style>
+</head>
+
+<body>
+
+<div id="formArea" class="form-container">
+
+<div class="header">
+    <img src="logo.png">
+    <h2>মরহুম সাজ্জাদ হোসাইন স্মৃতি ফুটবল একাডেমি</h2>
+    <label>তারিখ:</label>
+    <input type="date">
 </div>
-<div class="card">
-<h3>U-14</h3>
-<p>Game tactics & development</p>
+
+<div class="photo-box">ছবি</div>
+
+<div class="form-group">
+<label>নাম</label>
+<input type="text">
 </div>
-<div class="card">
-<h3>U-18</h3>
-<p>Advanced professional training</p>
+
+<div class="form-group">
+<label>জন্ম তারিখ</label>
+<input type="date">
 </div>
+
+<div class="form-group">
+<label>গ্রাম</label>
+<input type="text">
 </div>
-</section><!-- GALLERY --><section id="gallery" class="section">
-<h2>Gallery</h2>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2">
-<img src="https://images.unsplash.com/photo-1518600506278-4e8ef466b810">
-<img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2">
+
+<div class="form-group">
+<label>শিক্ষাগত যোগ্যতা</label>
+<input type="text">
 </div>
-</section><!-- ACHIEVEMENT --><section class="section">
-<h2>Achievements</h2>
-<p>Our players have participated in district and national level competitions.</p>
-</section><!-- CONTACT --><section id="contact" class="section">
-<h2>Admission Form</h2>
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="number" placeholder="Age" required>
-<input type="text" placeholder="Phone Number" required>
-<textarea placeholder="Message"></textarea>
-<button class="btn" type="submit">Submit</button>
-</form>
-</section><!-- FOOTER --><footer>
-<p>Location: Gobindaganj, Chatak, Sunamganj</p>
-<p>Established: 2026</p>
-<p>© 2026 MSH Football Academy</p>
-</footer></body>
+
+<div class="form-group">
+<label>থানা ও জেলা</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>পরিচয়পত্র নং</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>মোবাইল নাম্বার</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>ইমেইল</label>
+<input type="email">
+</div>
+
+<div class="form-group">
+<label>রক্তের গ্রুপ</label>
+<input type="text">
+</div>
+
+<h3>অঙ্গীকারনামা</h3>
+
+<textarea rows="10">
+আমি এই মর্মে অঙ্গীকার করছি যে, মরহুম সাজ্জাদ হোসাইন স্মৃতি ফুটবল একাডেমির নিয়ম-শৃঙ্খলা, সম্মান, সততা ও দায়িত্বশীলতা সর্বদা মেনে চলবো।
+
+১. একাডেমির সকল নিয়ম-কানুন যথাযথভাবে পালন করব  
+২. কোচ, খেলোয়াড় ও স্টাফদের সম্মান করব  
+৩. অনুশীলনে নিয়মিত উপস্থিত থাকব  
+৪. শৃঙ্খলা ও আচরণে একাডেমির মর্যাদা রক্ষা করব  
+৫. ব্যক্তিগত ফিটনেস উন্নত রাখব  
+৬. মাঠে ও মাঠের বাইরে ভদ্র আচরণ বজায় রাখব  
+৭. একাডেমির সুনাম ক্ষুণ্ন করব না  
+৮. নেশাজাতীয় অভ্যাস থেকে দূরে থাকব  
+৯. দল ও একাডেমির প্রতি নিবেদিত থাকব  
+১০. নিজেকে একজন ভালো খেলোয়াড় হিসেবে গড়ে তুলব  
+</textarea>
+
+<div class="signature">
+    <div>_____________<br>সদস্য সাক্ষর</div>
+    <div>_____________<br>অভিভাবক</div>
+    <div>_____________<br>ম্যানেজমেন্ট</div>
+</div>
+
+</div>
+
+<button onclick="downloadPDF()">📄 PDF Download</button>
+
+<script>
+function downloadPDF() {
+    const element = document.getElementById("formArea");
+    html2pdf().from(element).save("Registration_Form.pdf");
+}
+</script>
+
+</body>
 </html>
