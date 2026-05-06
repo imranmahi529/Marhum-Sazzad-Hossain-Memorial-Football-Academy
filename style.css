@@ -105,3 +105,19 @@ function downloadPDF() {
     position: relative;
     z-index: 1;
 }
+#formArea {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 10mm;
+    box-sizing: border-box;
+    input, textarea {
+    padding: 6px;
+    font-size: 13px;
+}
+
+h2, h3 {
+    margin: 5px 0;
+}
+    
+    
+}
