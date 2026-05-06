@@ -66,3 +66,26 @@ function downloadPDF() {
         pagebreak: { mode: ['avoid-all'] }
     }).from(element).save();
 }
+function downloadPDF() {
+    const element = document.getElementById("formArea");
+
+    html2pdf().set({
+        margin: 5,
+        filename: 'MSH_Registration.pdf',
+        image: { type: 'jpeg', quality: 1 },
+
+        html2canvas: {
+            scale: 2,
+            useCORS: true,
+            scrollY: 0
+        },
+
+        jsPDF: {
+            unit: 'mm',
+            format: 'a4',
+            orientation: 'portrait'
+        },
+
+        pagebreak: { mode: ['avoid-all'] }
+    }).from(element).save();
+}
